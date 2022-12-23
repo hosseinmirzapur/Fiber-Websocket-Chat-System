@@ -15,6 +15,7 @@ func init() {
 }
 
 func main() {
+
 	// initialize fiber
 	app := fiber.New(config.FiberConfig())
 

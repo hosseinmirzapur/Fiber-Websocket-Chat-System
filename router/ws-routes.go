@@ -8,8 +8,9 @@ import (
 )
 
 func SetupWsRoutes(app *fiber.App) {
+	ws := app.Group("/auth")
 	// Middleware on Websocket Routes
-	ws := app.Use(middlewares.NeedsUpgrade)
+	ws = ws.Use(middlewares.NeedsUpgrade)
 
 	// Websocket Routes
 	ws.Get("/key/:key/ws", websocket.New(controllers.WebsocketHandler))
