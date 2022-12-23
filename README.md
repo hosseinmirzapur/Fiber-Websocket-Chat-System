@@ -9,7 +9,8 @@ and
 
 ## Usage
 
-`go run .` and use postman to test it out!
+`go run .` and use postman to generate key and put it in browser's ``localstorage`` to connect
+<br>
 
 or e.g.
 

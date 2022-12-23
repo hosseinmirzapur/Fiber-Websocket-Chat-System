@@ -2,5 +2,5 @@ package models
 
 type User struct {
 	ID       string `json:"id"`
-	UserName string `json:"user_name" validation:"required,min:1"`
+	UserName string `json:"username" validation:"required,min:1"`
 }

@@ -30,11 +30,6 @@ func WebsocketHandler(c *websocket.Conn) {
 			}
 			return
 		}
-		err = c.WriteMessage(mt, msg)
-		if err != nil {
-			log.Println("write:", err)
-			break
-		}
 		if mt == websocket.TextMessage {
 			// Broadcast the received message
 			handlers.Broadcast <- username + ": " + string(msg)

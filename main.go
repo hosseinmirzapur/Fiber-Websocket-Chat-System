@@ -19,6 +19,9 @@ func main() {
 	// initialize fiber
 	app := fiber.New(config.FiberConfig())
 
+	// Html Section
+	go app.Static("/", "./chat.html")
+
 	// Goroutine for managing clients
 	go handlers.RunHub()
 
